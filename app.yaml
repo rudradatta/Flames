@@ -1,0 +1,47 @@
+runtime: python27
+api_version: 1
+threadsafe: false
+
+handlers:
+
+- url: /FlamesGameAndroid.apk
+  static_files: FlamesGameAndroid.apk
+  upload: FlamesGameAndroid.apk
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /sitemap.xml
+  static_files: sitemap.xml
+  upload: sitemap.xml
+
+- url: /fsga3ee5.txt
+  static_files: fsga3ee5.txt
+  upload: fsga3ee5.txt
+
+- url: /google17492bafd12f8b09.html
+  static_files: templates/google17492bafd12f8b09.html
+  upload: templates/google17492bafd12f8b09.html
+- url: /favicon.ico
+  static_files: media/images/favicon.ico
+  upload: media/images/favicon.ico
+
+- url: /media/css/(.*)
+  static_files: media/css/\1
+  upload: media/css/(.*)
+
+- url: /media/javascripts/(.*)
+  static_files: media/javascripts/\1
+  upload: media/javascripts/(.*)
+
+- url: /media/images/(.*)
+  static_files: media/images/\1
+  upload: media/images/(.*)
+
+- url: .*
+  script: main.py
+
+libraries:
+- name: django
+  version: "1.5"
